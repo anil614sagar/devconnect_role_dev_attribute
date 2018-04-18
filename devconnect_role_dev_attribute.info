@@ -1,0 +1,7 @@
+name = Devconnect Developer Role Attributes
+description = Apigee Drupal Developer Portal module to capture developer roles & populate same as edge developer attributes.
+core = 7.x
+package = Devconnect Custom
+version = "7.x-1.0"
+
+dependencies[] = devconnect_user

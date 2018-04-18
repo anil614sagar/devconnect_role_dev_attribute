@@ -1,0 +1,9 @@
+<?php
+function devconnect_role_dev_attribute_user_presave(&$edit, $account, $category) {
+  $user_roles = user_roles();
+  foreach ($edit['roles'] as $rid => $status) {
+    $role = $user_roles[$rid];
+    $role_name = str_replace(' ', '_', $role);
+    $edit['attribute_role_'.$role_name] = ($status ? TRUE : FALSE);
+  }
+}
